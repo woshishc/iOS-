@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HCRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //初始化window
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    HCRootViewController *rootVc = [[HCRootViewController alloc] init];
+    self.window.rootViewController = rootVc;
+    [self.window makeKeyAndVisible];
+    
+    //显示statusBar
+    application.statusBarHidden = NO;
+    
+    //设置停留在启动页的时间
+    [NSThread sleepForTimeInterval:0.5];
+    
     return YES;
 }
 

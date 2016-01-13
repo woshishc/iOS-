@@ -6,13 +6,13 @@
 //  Copyright © 2016年 kongjianjia. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "HCRootViewController.h"
 
-@interface ViewController ()
+@interface HCRootViewController ()
 
 @end
 
-@implementation ViewController
+@implementation HCRootViewController
 #pragma mark - 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
